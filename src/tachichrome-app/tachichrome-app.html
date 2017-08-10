@@ -1,0 +1,49 @@
+<dom-module id="tachichrome-app">
+  <template is="dom-bind">
+    <style is="custom-style">
+      :host {
+        display: block;
+
+        --primary-text-color: var(--dark-theme-text-color);
+        --primary-background-color: var(--paper-grey-800);
+        --secondary-text-color: var(--dark-theme-secondary-color);
+        --disabled-text-color: var(--dark-theme-disabled-color);
+        --divider-color: var(--dark-theme-divider-color);
+        --error-color: var(--paper-deep-orange-a700);
+
+        --primary-color: var(--paper-blue-600);
+        --light-primary-color: var(--paper-blue-500);
+        --dark-primary-color: var(--paper-blue-900);
+        --accent-color: var(--paper-blue-a200);
+        --light-accent-color: var(--paper-blue-a100);
+        --dark-accent-color: var(--paper-blue-a400);
+
+        --paper-font-common-base: {
+          font-family: 'Noto', 'Roboto', Helvetica, sans-serif;
+          -webkit-font-smoothing: antialiased;
+        };
+      }
+    </style>
+
+    <!-- app-location binds to the app's URL -->
+    <app-location route="{{route}}"></app-location>
+
+    <!-- this app-route manages the top-level routes -->
+    <app-route
+      route="{{route}}"
+      pattern="/:view"
+      data="{{routeData}}"
+      tail="{{subroute}}"></app-route>
+
+    <iron-pages selected="[[routeData.view]]" attr-for-selected="name">
+      <home-page name="" route="{{subroute}}"></home-page>
+    </iron-pages>
+  
+  </template>
+
+  <script>
+    Polymer({
+      is: 'tachichrome-app',
+    })
+  </script>
+</dom-module>

@@ -1,0 +1,15 @@
+{
+  "manifest_version": 2,
+  "name": "TachiChrome",
+  "version": 1,
+  "icons": {
+    "128": "icons/icon_128.png"
+  },
+  "permissions": [],
+  "app": {
+    "background": {
+      "scripts": ["src/js/background.js"]
+    }
+  },
+  "minimum_chrome_version": "57"
+}

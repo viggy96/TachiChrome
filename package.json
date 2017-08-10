@@ -1,0 +1,23 @@
+{
+  "name": "tachichrome",
+  "version": "1.0.0",
+  "description": "Chrome app version of Tachiyomi",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/viggy96/TachiChrome.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/viggy96/TachiChrome/issues"
+  },
+  "homepage": "https://github.com/viggy96/TachiChrome#readme",
+  "devDependencies": {},
+  "dependencies": {
+    "jquery": "^3.2.1"
+  }
+}

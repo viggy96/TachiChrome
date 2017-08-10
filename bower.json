@@ -1,0 +1,36 @@
+{
+  "name": "tachichrome",
+  "description": "Chrome app version of Tachiyomi",
+  "authors": [
+    "viggy96 <vigneshb.hp@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/viggy96/TachiChrome",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "app-route": "PolymerElements/app-route#^2.0.1",
+    "iron-icons": "^1.2.0",
+    "iron-image": "^1.2.5",
+    "iron-pages": "^1.0.8",
+    "paper-dialog": "^1.1.0",
+    "paper-drawer-panel": "^1.0.11",
+    "paper-input": "^1.1.24",
+    "paper-item": "^1.2.2",
+    "paper-menu-button": "^1.5.2",
+    "paper-menu": "^1.2.2",
+    "paper-scroll-header-panel": "^1.0.16",
+    "paper-tabs": "^1.8.0",
+    "paper-toolbar": "^1.1.7",
+    "platinum-sw": "^1.3.0",
+    "polymer": "^1.9.1",
+    "paper-dialog-scrollable": "PolymerElements/paper-dialog-scrollable#^2.1.0",
+    "paper-button": "PolymerElements/paper-button#^2.0.0",
+    "polymerfire": "firebase/polymerfire#^2.1.0"
+  }
+}

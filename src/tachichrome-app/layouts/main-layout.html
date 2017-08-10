@@ -1,0 +1,125 @@
+<dom-module id="main-layout" attributes="selected">
+  <template is="dom-bind">
+    <style is="custom-style">
+      :host {
+        display: block;
+      }
+
+      paper-scroll-header-panel .content {
+        padding: 8px;
+      }
+
+      .flex-center-align {
+        @apply(--layout-horizontal);
+        @apply(--layout-center);
+      }
+
+      .self-end {
+        /* apply mixin to align tabs to bottom of header */
+        @apply(--layout-self-end);
+      }
+
+      .spacer {
+        @apply(--layout-flex);
+      }
+
+      .header-logo {
+        background: var(--primary-color) url(../../static_assets/hako_header-min.png) no-repeat;
+        background-size: contain;
+      }
+
+      .dropdown-content {
+        position: fixed;
+        right: 0px;
+        background-color: var(--light-theme-background-color);
+      }
+
+      .dropdown-content paper-item {
+        color: var(--light-theme-text-color);
+      }
+
+      .paper-item-link {
+        color: inherit;
+        text-decoration: none;
+        color: var(--dark-theme-text-color);
+      }
+
+      paper-drawer-panel {
+        --paper-drawer-panel-main-container: {
+          background-color: var(--primary-background-color);
+        };
+        --paper-drawer-panel-left-drawer-container: {
+          background-color: var(--primary-background-color);
+        };
+      }
+    </style>
+  
+    <paper-drawer-panel>
+      <paper-header-panel shadow drawer>
+        <paper-toolbar>Menu</paper-toolbar>
+        <a class="paper-item-link" href="/" tabindex="-1">
+          <paper-icon-item active="{{selected}} == 'home'">
+            <iron-icon icon="icons:book" item-icon></iron-icon>
+              My Library
+          </paper-icon-item>
+        </a>       
+        
+        <a class="paper-item-link" href="/updates" tabindex="-1">
+          <paper-icon-item active="{{selected}} == 'library-updates'">
+            <iron-icon icon="icons:update" item-icon></iron-icon>
+            Library Updates
+          </paper-icon-item>
+        </a>
+          
+        <a class="paper-item-link" href="/recent" tabindex="-1">
+          <paper-icon-item active="{{selected}} == 'recently-read'">
+            <iron-icon icon="icons:visibility" item-icon></iron-icon>
+            Recently read
+          </paper-icon-item>
+        </a>
+
+        <a class="paper-item-link" href="/catalogues" tabindex="-1">
+          <paper-icon-item active="{{selected}} == 'catalogues'">
+            <iron-icon icon="icons:explore" item-icon></iron-icon>
+            Catalogues
+          </paper-icon-item>
+        </a>
+          
+        <a class="paper-item-link" href="/latest" tabindex="-1">
+          <paper-icon-item active="{{selected}} == 'latest-updates'">
+            <iron-icon icon="icons:watch-later" item-icon></iron-icon>
+            Latest updates
+          </paper-icon-item>
+        </a>
+          
+        <a class="paper-item-link" href="/downloads" tabindex="-1">
+          <paper-icon-item active="{{selected}} == 'download-queue'">
+            <iron-icon icon="icons:file-download" item-icon></iron-icon>
+            Download queue
+          </paper-icon-item>
+        </a>
+      </paper-header-panel>
+      <paper-scroll-header-panel main>
+        <paper-toolbar>
+          <paper-icon-button icon="menu" paper-drawer-toggle></paper-icon-button>
+          <div class="flex"></div>
+        </paper-toolbar>
+
+        <content> </content>
+
+      </paper-scroll-header-panel>
+
+    </paper-drawer-panel>
+    
+        
+  </template>
+
+  <script>
+    Polymer({
+      is: 'main-layout',
+      properties: {
+        selected: String,
+      },
+    })
+  </script>
+</dom-module>
